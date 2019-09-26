@@ -116,10 +116,75 @@ function Scene3() {
 function Chapter1Choice3() {
     var Chapter1Choice3S1 = prompt("The job center looks beige and somber, the only thing breaking the silence is the whirring of the AC and the receptionist working on the computer \n \nWhat will you do?").toLowerCase();
     if (Chapter1Choice3S1 == "Wait") {
-        Chapter1Choice4();
+        Chapter1Scene4();
     } else if (Chapter1Choice3S1 == "look around") {
         alert("Despite this somber look they tried to brighten up the place by hanging a poster on a wall that reads 'Don't worry everything's going to be okay'");
         alert("It really doesn't help");
         Chapter1Choice3();
+    } else {
+        alert("Available actions are 'look around' and 'wait'");
+    }
+}
+function Chapter1Scene4() {
+    alert("You decided to wait until it was your turn");
+    alert("The screen shows your number and you get up");
+    alert("As you stand up the receptionist tells you that it's down the hall to your right, you follow the instructions into the office");
+    alert("You're greeted by a rather large man he asks if you had any prior workexperience");
+    Chapter1Choice4();
+}
+function Chapter1Choice4();
+if (ResistanceCard == 1) {
+    var Chapter1Choice4S1 = prompt("You have prior work experience but you can't help but think back to that card you received, perhaps those people have work for you \n \nTell the man 'yes', 'no' or 'ask him about the card'");
+} else {
+    var Chapter1Choice4S1 = prompt("You have prior work experience \n \nTell the man 'yes' or 'no'");
+}
+if (Chapter1Choice4S1 == "yes") {
+    alert("You tell the man that you had prior experience in industrial work, he types on his computer and then tells you 'sorry it seems that I've got nothing for you at the moment'");
+    Chapter1Scene5();
+} else if (Chapter1Choice4S1 == "no") {
+    alert("The sighs a bit asks if you have any preference in where you want to work, you tell him no. The man then proceeds to type on his computer but then tells you that he turned up empty handed");
+    Chapter1Scene5();
+} else if (Chapter1Choice4S1 == "ask him about the card" && ResistanceCard == 1) {
+    alert("you show the man the card you've been given and ask about the people the man immediately asks 'Do you have a death wish son?!?' 'Even if there are no jobs at the moment you're better off not working for them as you will be marked a criminal");
+    alert("'Whatever you do, do NOT ,under any cicumstance, join them, it's suicide!'");
+    alert("'and get rid of that card! You're lucky the police haven't searched you yet'");
+    Chapter1Scene5();
+} else if (ResistanceCard == 1) {
+    alert("The man is confused 'Sorry, what?'\n \n Your available options are 'yes', 'no' or 'ask him about the card'");
+} else {
+    alert("The man is confused 'Sorry, what?'\n \n Your available options are 'yes' or 'no'");
+}
+function Chapter1Scene5() {
+    alert("you head out of the job center");
+    var Chapter1Choice5 = prompt("You can either take the bus or the metro home, which will it be?")
+    if (Chapter1Choice5 = "bus") {
+        alert("you decided to take the bus");
+        alert("halfway on the route the bus suddenly stops and police walk in, it's a search.");
+        if (ResistanceCard == 1) {
+            alert("Once the police search you they find the card you got they asked where you got it and you told them from someone at the metro, you're then arrested and called in for questioning \n \nYou got the arrested ending!");
+        } else {
+            alert("The police searched everyone and headed out, they didn't find anything and the bus moves on and you get home");
+        }
+    } else if (Chapter1Choice5 = "metro") {
+        alert("You decided to take the metro");
+        alert("You waited for the metro, got in and got home");
+    } else {
+        alert("Invalid answer, available answers are 'bus' and 'metro'");
+    }
+}
+function Chapter1FinalScene() {
+    if (ResistanceCard == 1) {
+        alert("You ponder on whether or not to work for these people who have given you this card");
+        var Chapter1FinalChoice = prompt("You have decided to")
+        if (Chapter1FinalChoice == "work for them") {
+            alert("you have made up your mind you decided to check this out even if it might be your end \n \n You got the Potential recruit ending");
+        } else if (Chapter1FinalChoice == "not work for them") {
+            alert("You decided it is a better idea to not put yourself into such unnecessary danger \n \nYou got the strange day ending")
+        } else {
+            alert("Invalid answer available answers are 'work for them' and 'not work for them'");
+            Chapter1FinalScene();
+        }
+    } else {
+        alert("you got home and life went on as per usual \n \n you got the normal day ending");
     }
 }
