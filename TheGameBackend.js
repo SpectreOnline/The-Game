@@ -61,11 +61,13 @@ function Scene2() {
             }
         }
     } else if (Chapter1Choice2 == "bus") {
+        console.log("First Chapter second scene");
         alert("You decided to take the bus");
         alert("As you take the bus you drive through the slumps, a somber sight for a city advertised as the brightest future one can have");
         alert("You get off the bus and walk over to the job center");
         Scene3();
     } else if (Chapter1Choice2 == "metro") {
+        console.log("First Chapter second scene");
         alert("You decided to take the metro");
         alert("As you wait on the station for the metro to arrive an odd figure in a hoodie and with a mask on approaches you hands you a business card of sorts and walks off");
         var ResistanceCard = 1;
@@ -78,6 +80,7 @@ function Scene2() {
         if (Chapter1Choice2S3 == "inspect card") {
             alert("The card has a symbol of a fist on it, the backside reads:'You have been chosen we expect you at Grossumstreet 34, tell no-one.'");
         } else if (Chapter1Choice2S3 == "wait") {
+            console.log("First Chapter second scene");
             alert("You decided to wait for the metro");
             alert("The metro arrives and you get in");
             alert("Once you arrive at the platform close to the job center, you can't help but shake the feeling of being watched");
@@ -93,6 +96,7 @@ function Scene2() {
     }
 }
 function MetroScene2() {
+    console.log("First Chapter second scene");
     if (Abusedbyofficer >= 1 && Abusedbyofficer <= 2 && Abusedbyofficer > 0 && Abusedbyofficer < 2) {
         var Chapter1Choice2S4 = prompt("One of the officers halt you \n \nOfficer: Are you alright?");
         if (Chapter1Choice2S4 == "yes") {
@@ -107,6 +111,7 @@ function MetroScene2() {
 }
 
 function Scene3() {
+    console.log("First Chapter third scene");
     alert("As you arrive right at the jobcenter the announcement jingle plays and the boards spring to live");
     alert("'Because of recently transpired events, citizens are now required to show thier IDs to police on sight and may or may not be called in for questioning'");
     alert("'Please note that this is for your safety' You walk inside the job center");
@@ -114,6 +119,7 @@ function Scene3() {
     Chapter1Choice3();
 }
 function Chapter1Choice3() {
+    console.log("First Chapter third scene");
     var Chapter1Choice3S1 = prompt("The job center looks beige and somber, the only thing breaking the silence is the whirring of the AC and the receptionist working on the computer \n \nWhat will you do?").toLowerCase();
     if (Chapter1Choice3S1 == "Wait") {
         Chapter1Scene4();
@@ -126,6 +132,7 @@ function Chapter1Choice3() {
     }
 }
 function Chapter1Scene4() {
+    console.log("First Chapter fourth scene");
     alert("You decided to wait until it was your turn");
     alert("The screen shows your number and you get up");
     alert("As you stand up the receptionist tells you that it's down the hall to your right, you follow the instructions into the office");
@@ -134,8 +141,10 @@ function Chapter1Scene4() {
 }
 function Chapter1Choice4();
 if (ResistanceCard == 1) {
+    console.log("First Chapter fourth scene");
     var Chapter1Choice4S1 = prompt("You have prior work experience but you can't help but think back to that card you received, perhaps those people have work for you \n \nTell the man 'yes', 'no' or 'ask him about the card'");
 } else {
+    console.log("First Chapter fourth scene");
     var Chapter1Choice4S1 = prompt("You have prior work experience \n \nTell the man 'yes' or 'no'");
 }
 if (Chapter1Choice4S1 == "yes") {
@@ -150,11 +159,13 @@ if (Chapter1Choice4S1 == "yes") {
     alert("'and get rid of that card! You're lucky the police haven't searched you yet'");
     Chapter1Scene5();
 } else if (ResistanceCard == 1) {
+    console.log("First Chapter fourth scene");
     alert("The man is confused 'Sorry, what?'\n \n Your available options are 'yes', 'no' or 'ask him about the card'");
 } else {
     alert("The man is confused 'Sorry, what?'\n \n Your available options are 'yes' or 'no'");
 }
 function Chapter1Scene5() {
+    console.log("First Chapter fifth scene");
     alert("you head out of the job center");
     var Chapter1Choice5 = prompt("You can either take the bus or the metro home, which will it be?")
     if (Chapter1Choice5 = "bus") {
@@ -163,9 +174,11 @@ function Chapter1Scene5() {
         if (ResistanceCard == 1) {
             alert("Once the police search you they find the card you got they asked where you got it and you told them from someone at the metro, you're then arrested and called in for questioning \n \nYou got the arrested ending!");
         } else {
+            console.log("First Chapter fifth scene");
             alert("The police searched everyone and headed out, they didn't find anything and the bus moves on and you get home");
         }
     } else if (Chapter1Choice5 = "metro") {
+        console.log("First Chapter fifth scene");
         alert("You decided to take the metro");
         alert("You waited for the metro, got in and got home");
     } else {
@@ -173,6 +186,7 @@ function Chapter1Scene5() {
     }
 }
 function Chapter1FinalScene() {
+    console.log("First Chapter final scene");
     if (ResistanceCard == 1) {
         alert("You ponder on whether or not to work for these people who have given you this card");
         var Chapter1FinalChoice = prompt("You have decided to")
